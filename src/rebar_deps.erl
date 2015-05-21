@@ -139,7 +139,7 @@ setup_env(Config) ->
     {true, DepsDir} = get_deps_dir(Config),
     %% include rebar's DepsDir in ERL_LIBS
     Separator = case os:type() of
-                    {win32, nt} ->
+                    {win32, _} ->
                         ";";
                     _ ->
                         ":"
